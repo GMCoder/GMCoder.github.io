@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kinleon的博客</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://gmcoder.github.io/"/>
+  <updated>2016-09-04T16:08:12.000Z</updated>
+  <id>https://gmcoder.github.io/</id>
+  
+  <author>
+    <name>Kinleon</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我自己的优化总结</title>
+    <link href="https://gmcoder.github.io/2016/09/05/%E6%88%91%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93/"/>
+    <id>https://gmcoder.github.io/2016/09/05/我自己的优化总结/</id>
+    <published>2016-09-04T16:07:13.000Z</published>
+    <updated>2016-09-04T16:08:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="iOS优化之路"><a href="#iOS优化之路" class="headerlink" title="iOS优化之路"></a>iOS优化之路</h1><h2 id="tableView优化"><a href="#tableView优化" class="headerlink" title="tableView优化"></a>tableView优化</h2><ul>
+<li>tableView的优化<br>tableView常见的问题就是卡顿 造成这种情况主要是没有尽快的返回cell和离屏渲染操作或者混合操作造成的</li>
+</ul>
+<ol>
+<li>尽快的返回cell<br> 给cell数据不要在tableViewCell那个方法里 要在willDisplay中<br> 尽快的返回cell的行高 不要做复杂的计算  ematiedRow 和self-sizeing尽量不要用<br> autolayout 会造成大量的运算 但是一般的项目不需要考虑这个 过早的优化会造成项目的周期受到很大的影响</li>
+<li>离屏渲染<br> 网上很多成熟的解决方法 对于少量的不需要去解决 大量造成卡顿的比如view就利用贝塞尔曲线画园 imageView切割图片成圆形 </li>
+<li>混合操作<br> 尽量不要用透明 这样会造成混合操作 造成卡顿 视图不要过于复杂 层数太多容易卡顿 </li>
+<li>ASDK是Facebook开源的框架 将大部分操作放在异步线程  很多操作放在layer上 都可以优化gpu的压力 让CPU和gpu负载均衡 预缓存一些内容</li>
+<li>YYKit是个很好的优化框架 可以学习 发现这些问题主要的操作是善于运用instruments timer可以分析执行时间 哪部分浪费时间多 leak可以是静态分析 主要看有哪些静态内存泄漏 哪些没有用到的指针 allocations分析内存分配 内存泄漏的地方动态检查 GPUDriver 检查GPU的使用情况 CoreAnimation可以看哪些部分有离屏渲染和混合操作</li>
+</ol>
+<ul>
+<li>代码优化<br>  主要是要有一个规范的代码规范 </li>
+<li>内存优化<br>  减少不必要的开销 例如imageName这个会缓存图片 经常用的图片可以用这个  imageWithContentsOfFile不会缓存 用于不经常用的图片加载<br>  使用instruments来监测内存情况 重写drawrect会造成内存泄漏 合理使用缓存<br>  在block中创建的一些临时对象可以加入到autoreleasePool减少消耗<br>  监听内存警告，以下几种API可以注册监听系统通知的内存警告<ul>
+<li>The applicationDidReceiveMemoryWarning: method of your app delegate.</li>
+<li>The didReceiveMemoryWarning method of your UIViewController classes.</li>
+<li>The UIApplicationDidReceiveMemoryWarningNotification notification.</li>
+<li>Dispatch sources of type DISPATCH_SOURCE_TYPE_MEMORYPRESSURE. This technique is the only one that you can use to distinguish the severity of the memory pressure.e<br>检查内存泄漏<br>资源文件尽可能的小，资源文件是放在磁盘的，但是使用之前会被加载到内存中，所以要尽量使资源文件小，PNG格式的图片对iOS来说是比较适合的<br>比较大的文件放在数据库中<br>懒加载资源：在你不是真的需要的时候不要提前加载资源，看上去你是节省了时间，实际上减慢了你的app，另外，加载已经不需要使用的资源会浪费内存。<br>聪明的分配内存<br>避免加载一个大的资源文件，如果有一个小一点的可以达到同样的目的。避免使用你一个高质量的图片，使用合适iOS基本配置设备的图片。如果必须使用一个大的资源文件，尽量只加载需要的部分。例如，你如果需要加载一整个文件进内存，使用mmap和munmap函数可以将文件分成合适的部分加载或倒出内存。<br>减少使用autorelease创建对象，使用ARC,使用alloc/init创建对象，让编译器在合适的时候去释放它们。即使对那些希望超过作用域的临时变量这也是合适的。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>减少电量消耗<br>  苹果官方文档<ol>
+<li>CPU</li>
+<li>wifi bluetooth baseband radios</li>
+<li>coreLocation frameWork</li>
+<li>the accelerometers(加速计)</li>
+<li>disk</li>
+</ol>
+<ul>
+<li>避免长连接，长连接会让CPU一直运转 使用NSRunLoop或者NSTimer唤醒替代长连接</li>
+<li>idleTimerDisabled这个属性默认是no,尽量不要把这个属性修改成yes来保持屏幕常亮</li>
+<li>结合一些操作可以最大化的使用闲置时间，分块操作一些任务不如集中起来进行 这样不会经常唤醒CPU</li>
+<li>避免频繁的调用磁盘存储</li>
+<li>不要画的比屏幕需要的快，绘图是一个高消耗的操作。不要依靠硬件来调节帧率，只画屏幕实际需要的。</li>
+<li>如果你使用加速计处理加速计事件，在不用的时候禁用掉。同样将事件传递的频率调到尽量小。(这一块我并没有自己做过 所以有待实践)</li>
+<li>连接网络服务器只在需要的时候</li>
+<li>当你连接网络请求的时候 将数据尽量简洁</li>
+<li>短时间传输一个大的数据包比长时间分段传输同样大小的数据包更合适。当系统检测到缺乏活动时，系统会关闭Wi-Fi和电池收音机。当它在一段较长的时间内传输数据时，你的应用程序使用的功率比在较短的时间内传输相同数量的数据的消耗要大得多。当使用NSURLSession类执行多个上传或下载任务，将这些任务在一起而不是等待一个结束之后开始下一个。该系统管理自动执行队列任务时，它这样做是最有效的。</li>
+<li>连接网络的时候用WiFi比流量更省电。PS:这句好像是废话 用户选择哪个网络又不是我们能控制的</li>
+<li>如果使用CoreLocation框架来收集位置数据，可以尽快禁用位置更新，并将距离过滤器和准确度级别设置为适当的值。核心位置使用GPS，电池和Wi-Fi网络，以确定用户的位置。虽然核心位置的工作很难尽量减少使用，设置的准确性和过滤器的值可以让CoreLocation在不需要的时候完全关闭硬件消耗。</li>
+<li>Instruments中有可以收集电量消耗信息的部件。你可以用Instruments来收集电量消耗的信息并且收集并测量硬件的电量消耗，例如蓝牙，WiFi，CPU等。</li>
+</ul>
+</li>
+<li>网络请求优化 例如减少请求时间 设置缓存策略</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS优化之路&quot;&gt;&lt;a href=&quot;#iOS优化之路&quot; class=&quot;headerlink&quot; title=&quot;iOS优化之路&quot;&gt;&lt;/a&gt;iOS优化之路&lt;/h1&gt;&lt;h2 id=&quot;tableView优化&quot;&gt;&lt;a href=&quot;#tableView优化&quot; class=&quot;he
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pythonTips</title>
+    <link href="https://gmcoder.github.io/2016/09/04/pythonTips/"/>
+    <id>https://gmcoder.github.io/2016/09/04/pythonTips/</id>
+    <published>2016-09-04T15:57:57.000Z</published>
+    <updated>2016-09-04T16:08:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python-tips"><a href="#python-tips" class="headerlink" title="python tips"></a>python tips</h1><h2 id="basic-grammer"><a href="#basic-grammer" class="headerlink" title="basic grammer"></a>basic grammer</h2><ul>
+<li>print(‘Hello,world’)</li>
+<li>input()</li>
+<li>\  r’’ <em>no transfer</em></li>
+<li>True False and or not None </li>
+<li>/ // %</li>
+<li>list[‘one’,..] tuple(‘one’)</li>
+<li><code>if aaa: elif bbb :  else :</code>  <code>while s &gt; 0:   print(&#39;there is no money&#39;)</code></li>
+<li>range()  pass</li>
+<li>dict = {‘name’:’kinleon’,’age’:25}  s = set{[1,2,3,3]} s = {1,2,3}</li>
+<li>abs(-20) max(1,2,3) int() hex()</li>
+<li><code>def function():     return</code> from fileName import functionName<h2 id="higher-property"><a href="#higher-property" class="headerlink" title="higher property"></a>higher property</h2></li>
+</ul>
+<ol>
+<li>切片<br> list[0:5:2] ‘abcdef’[:2]</li>
+<li>迭代<br> for xx in …<br> from collections import Iterable<br> isinstance([1,2,3],Iterable) True<br> for i, value in enumerate([‘a’, ‘b’, ‘c’]):<br> for x,y in dict:</li>
+<li>列表生成式 (PS:看到这我又一次感叹Python的变态)<br> list[1,2,3,4,5] = list(range(1,6))<br> [x * x for x in range(1, 11) if x % 2 == 0]<br> [m + n for m in ‘ABC’ for n in ‘XYZ’]<br> [k + ‘=’ + v for k, v in d.items()]<br> [s.lower() for s in L]</li>
+<li>生成器<br> l = ()<br> 斐波那契数列原理 通过算法推算后面的内容<br> <code>def fib(max):  n, a, b = 0, 0, 1   while n &lt; max:  print(b)    a, b = b, a + b   n = n + 1     return &#39;done&#39;</code><br> 函数内部有yield  这个函数就是generator  生成器主要指的是一种机制  一边循环一边计算</li>
+<li></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;python-tips&quot;&gt;&lt;a href=&quot;#python-tips&quot; class=&quot;headerlink&quot; title=&quot;python tips&quot;&gt;&lt;/a&gt;python tips&lt;/h1&gt;&lt;h2 id=&quot;basic-grammer&quot;&gt;&lt;a href=&quot;#basi
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
