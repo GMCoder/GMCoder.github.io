@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gmcoder.github.io/"/>
-  <updated>2016-09-04T16:08:12.000Z</updated>
+  <updated>2016-09-06T15:44:32.000Z</updated>
   <id>https://gmcoder.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://gmcoder.github.io/2016/09/05/%E6%88%91%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93/"/>
     <id>https://gmcoder.github.io/2016/09/05/我自己的优化总结/</id>
     <published>2016-09-04T16:07:13.000Z</published>
-    <updated>2016-09-04T16:08:12.000Z</updated>
+    <updated>2016-09-06T15:44:32.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="iOS优化之路"><a href="#iOS优化之路" class="headerlink" title="iOS优化之路"></a>iOS优化之路</h1><h2 id="tableView优化"><a href="#tableView优化" class="headerlink" title="tableView优化"></a>tableView优化</h2><ul>
 <li>tableView的优化<br>tableView常见的问题就是卡顿 造成这种情况主要是没有尽快的返回cell和离屏渲染操作或者混合操作造成的</li>
@@ -75,6 +75,10 @@
     
     </summary>
     
+      <category term="iOS" scheme="https://gmcoder.github.io/categories/iOS/"/>
+    
+    
+      <category term="iOS优化" scheme="https://gmcoder.github.io/tags/iOS%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
@@ -83,7 +87,7 @@
     <link href="https://gmcoder.github.io/2016/09/04/pythonTips/"/>
     <id>https://gmcoder.github.io/2016/09/04/pythonTips/</id>
     <published>2016-09-04T15:57:57.000Z</published>
-    <updated>2016-09-06T15:22:06.000Z</updated>
+    <updated>2016-09-06T15:45:03.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="python-tips"><a href="#python-tips" class="headerlink" title="python tips"></a>python tips</h1><h2 id="basic-grammer"><a href="#basic-grammer" class="headerlink" title="basic grammer"></a>basic grammer</h2><ul>
 <li>print(‘Hello,world’)</li>
@@ -113,8 +117,10 @@
     
     </summary>
     
+      <category term="Python" scheme="https://gmcoder.github.io/categories/Python/"/>
     
-      <category term="Python" scheme="https://gmcoder.github.io/tags/Python/"/>
+    
+      <category term="Tips" scheme="https://gmcoder.github.io/tags/Tips/"/>
     
   </entry>
   
