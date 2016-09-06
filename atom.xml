@@ -83,7 +83,7 @@
     <link href="https://gmcoder.github.io/2016/09/04/pythonTips/"/>
     <id>https://gmcoder.github.io/2016/09/04/pythonTips/</id>
     <published>2016-09-04T15:57:57.000Z</published>
-    <updated>2016-09-04T16:08:27.000Z</updated>
+    <updated>2016-09-06T15:22:06.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="python-tips"><a href="#python-tips" class="headerlink" title="python tips"></a>python tips</h1><h2 id="basic-grammer"><a href="#basic-grammer" class="headerlink" title="basic grammer"></a>basic grammer</h2><ul>
 <li>print(‘Hello,world’)</li>
@@ -113,6 +113,8 @@
     
     </summary>
     
+    
+      <category term="Python" scheme="https://gmcoder.github.io/tags/Python/"/>
     
   </entry>
   
