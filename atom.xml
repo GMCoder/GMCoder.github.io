@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gmcoder.github.io/"/>
-  <updated>2016-09-19T14:26:29.000Z</updated>
+  <updated>2016-09-19T14:46:34.000Z</updated>
   <id>https://gmcoder.github.io/</id>
   
   <author>
@@ -20,9 +20,14 @@
     <link href="https://gmcoder.github.io/2016/09/19/%E7%80%91%E5%B8%83%E6%B5%81/"/>
     <id>https://gmcoder.github.io/2016/09/19/瀑布流/</id>
     <published>2016-09-19T14:26:29.000Z</published>
-    <updated>2016-09-19T14:26:29.000Z</updated>
+    <updated>2016-09-19T14:46:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基于UICollectionView的瀑布流实现"><a href="#基于UICollectionView的瀑布流实现" class="headerlink" title="基于UICollectionView的瀑布流实现"></a>基于UICollectionView的瀑布流实现</h1><p> 最近发现一个app的页面展示瀑布流效果看着蛮不错，然后发现自己也好久没有做过这个了，于是手痒写了一个简单的demo，下面是我的实现过程。</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;基于UICollectionView的瀑布流实现&quot;&gt;&lt;a href=&quot;#基于UICollectionView的瀑布流实现&quot; class=&quot;headerlink&quot; title=&quot;基于UICollectionView的瀑布流实现&quot;&gt;&lt;/a&gt;基于UICollection
     
     </summary>
     
