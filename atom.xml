@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gmcoder.github.io/"/>
-  <updated>2016-09-19T14:48:03.000Z</updated>
+  <updated>2016-09-19T14:49:16.000Z</updated>
   <id>https://gmcoder.github.io/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于核心动画的基本讲解</title>
+    <link href="https://gmcoder.github.io/2016/09/19/%E5%85%B3%E4%BA%8E%E6%A0%B8%E5%BF%83%E5%8A%A8%E7%94%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%B2%E8%A7%A3/"/>
+    <id>https://gmcoder.github.io/2016/09/19/关于核心动画的基本讲解/</id>
+    <published>2016-09-19T14:49:16.000Z</published>
+    <updated>2016-09-19T14:49:16.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>pc端传送文件给iPhone功能实现</title>

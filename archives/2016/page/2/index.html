@@ -86,19 +86,15 @@
 
 
 
-<meta name="description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mosquitto框架服务端搭建探路">
-<meta property="og:url" content="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/index.html">
+<meta name="description" content="做好一件事。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kinleon的博客">
+<meta property="og:url" content="https://gmcoder.github.io/archives/2016/page/2/index.html">
 <meta property="og:site_name" content="Kinleon的博客">
-<meta property="og:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
-<meta property="og:updated_time" content="2016-09-17T14:36:35.000Z">
+<meta property="og:description" content="做好一件事。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mosquitto框架服务端搭建探路">
-<meta name="twitter:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
+<meta name="twitter:title" content="Kinleon的博客">
+<meta name="twitter:description" content="做好一件事。">
 
 
 
@@ -119,9 +115,9 @@
 
 
 
-  <link rel="canonical" href="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/"/>
+  <link rel="canonical" href="https://gmcoder.github.io/archives/2016/page/2/"/>
 
-  <title> Mosquitto框架服务端搭建探路 | Kinleon的博客 </title>
+  <title> 归档 | Kinleon的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -240,121 +236,70 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 6 篇日志。 继续努力。
+    </span>
+
     
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Mosquitto框架服务端搭建探路
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T20:15:46+08:00" content="2016-09-11">
-              2016-09-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
-      
-        <h1 id="Mosquitto框架"><a href="#Mosquitto框架" class="headerlink" title="Mosquitto框架"></a>Mosquitto框架</h1><p> mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。</p>
-<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p> 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。<br> 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大家踩坑，我还是把我踩得坑分享出来。我安装的是CentOS7系统，是Linux的发行版之一。<br> Mosquitto的安装有两种方法，一种是源码安装，一种是yum安装。对于我这种懒惰的人来说，果断选择了三行命令的yum安装方法。<br> 安装之后我开始调试，在CentOS上开启三个终端，一个开启服务，一个订阅，一个发布，测试通过，可以使用。但是问题来了，我自己写的客户端却一直不成功，ip地址也对，可以ping的通，煎熬了我一晚上，第二天发现自己第一次使用CentOS不知道这个防火墙是自带开启的，郁闷。</p>
-
-      
-    </div>
-
-    <div>
       
         
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/09/05/我自己的优化总结/" rel="next" title="我自己的优化总结">
-                <i class="fa fa-chevron-left"></i> 我自己的优化总结
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/19/瀑布流/" rel="prev" title="瀑布流">
-                瀑布流 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
       
+      
 
       
-      
-    </footer>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/09/04/pythonTips/" itemprop="url">
+              
+                <span itemprop="name">pythonTips</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-09-04T23:57:57+08:00"
+              content="2016-09-04" >
+          09-04
+        </time>
+      </div>
+
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/2016/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2016/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
 
           </div>
@@ -362,10 +307,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -385,17 +326,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -472,17 +404,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mosquitto框架"><span class="nav-number">1.</span> <span class="nav-text">Mosquitto框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境介绍"><span class="nav-number">2.</span> <span class="nav-text">环境介绍</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -579,9 +500,11 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   

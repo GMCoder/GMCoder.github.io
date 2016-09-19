@@ -86,19 +86,16 @@
 
 
 
-<meta name="description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
+<meta name="description" content="做好一件事。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mosquitto框架服务端搭建探路">
-<meta property="og:url" content="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/index.html">
+<meta property="og:title" content="关于核心动画的基本讲解">
+<meta property="og:url" content="https://gmcoder.github.io/2016/09/19/关于核心动画的基本讲解/index.html">
 <meta property="og:site_name" content="Kinleon的博客">
-<meta property="og:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
-<meta property="og:updated_time" content="2016-09-17T14:36:35.000Z">
+<meta property="og:description" content="做好一件事。">
+<meta property="og:updated_time" content="2016-09-19T14:49:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mosquitto框架服务端搭建探路">
-<meta name="twitter:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
+<meta name="twitter:title" content="关于核心动画的基本讲解">
+<meta name="twitter:description" content="做好一件事。">
 
 
 
@@ -119,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/"/>
+  <link rel="canonical" href="https://gmcoder.github.io/2016/09/19/关于核心动画的基本讲解/"/>
 
-  <title> Mosquitto框架服务端搭建探路 | Kinleon的博客 </title>
+  <title> 关于核心动画的基本讲解 | Kinleon的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +258,7 @@
             
             
               
-                Mosquitto框架服务端搭建探路
+                关于核心动画的基本讲解
               
             
           </h1>
@@ -273,8 +270,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T20:15:46+08:00" content="2016-09-11">
-              2016-09-11
+            <time itemprop="dateCreated" datetime="2016-09-19T22:49:16+08:00" content="2016-09-19">
+              2016-09-19
             </time>
           </span>
 
@@ -301,9 +298,7 @@
       
 
       
-        <h1 id="Mosquitto框架"><a href="#Mosquitto框架" class="headerlink" title="Mosquitto框架"></a>Mosquitto框架</h1><p> mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。</p>
-<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p> 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。<br> 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大家踩坑，我还是把我踩得坑分享出来。我安装的是CentOS7系统，是Linux的发行版之一。<br> Mosquitto的安装有两种方法，一种是源码安装，一种是yum安装。对于我这种懒惰的人来说，果断选择了三行命令的yum安装方法。<br> 安装之后我开始调试，在CentOS上开启三个终端，一个开启服务，一个订阅，一个发布，测试通过，可以使用。但是问题来了，我自己写的客户端却一直不成功，ip地址也对，可以ping的通，煎熬了我一晚上，第二天发现自己第一次使用CentOS不知道这个防火墙是自带开启的，郁闷。</p>
-
+        
       
     </div>
 
@@ -328,17 +323,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/05/我自己的优化总结/" rel="next" title="我自己的优化总结">
-                <i class="fa fa-chevron-left"></i> 我自己的优化总结
+              <a href="/2016/09/19/pc端传送文件给iPhone功能实现/" rel="next" title="pc端传送文件给iPhone功能实现">
+                <i class="fa fa-chevron-left"></i> pc端传送文件给iPhone功能实现
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/19/瀑布流/" rel="prev" title="瀑布流">
-                瀑布流 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,7 +470,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mosquitto框架"><span class="nav-number">1.</span> <span class="nav-text">Mosquitto框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境介绍"><span class="nav-number">2.</span> <span class="nav-text">环境介绍</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

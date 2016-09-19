@@ -86,19 +86,15 @@
 
 
 
-<meta name="description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mosquitto框架服务端搭建探路">
-<meta property="og:url" content="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/index.html">
+<meta name="description" content="做好一件事。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kinleon的博客">
+<meta property="og:url" content="https://gmcoder.github.io/page/2/index.html">
 <meta property="og:site_name" content="Kinleon的博客">
-<meta property="og:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
-<meta property="og:updated_time" content="2016-09-17T14:36:35.000Z">
+<meta property="og:description" content="做好一件事。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mosquitto框架服务端搭建探路">
-<meta name="twitter:description" content="Mosquitto框架 mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。
-环境介绍 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大">
+<meta name="twitter:title" content="Kinleon的博客">
+<meta name="twitter:description" content="做好一件事。">
 
 
 
@@ -119,9 +115,9 @@
 
 
 
-  <link rel="canonical" href="https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/"/>
+  <link rel="canonical" href="https://gmcoder.github.io/page/2/"/>
 
-  <title> Mosquitto框架服务端搭建探路 | Kinleon的博客 </title>
+  <title> Kinleon的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +138,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -261,7 +259,10 @@
             
             
               
-                Mosquitto框架服务端搭建探路
+                
+                <a class="post-title-link" href="/2016/09/04/pythonTips/" itemprop="url">
+                  pythonTips
+                </a>
               
             
           </h1>
@@ -273,11 +274,30 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T20:15:46+08:00" content="2016-09-11">
-              2016-09-11
+            <time itemprop="dateCreated" datetime="2016-09-04T23:57:57+08:00" content="2016-09-04">
+              2016-09-04
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -301,23 +321,39 @@
       
 
       
-        <h1 id="Mosquitto框架"><a href="#Mosquitto框架" class="headerlink" title="Mosquitto框架"></a>Mosquitto框架</h1><p> mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。</p>
-<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p> 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。<br> 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大家踩坑，我还是把我踩得坑分享出来。我安装的是CentOS7系统，是Linux的发行版之一。<br> Mosquitto的安装有两种方法，一种是源码安装，一种是yum安装。对于我这种懒惰的人来说，果断选择了三行命令的yum安装方法。<br> 安装之后我开始调试，在CentOS上开启三个终端，一个开启服务，一个订阅，一个发布，测试通过，可以使用。但是问题来了，我自己写的客户端却一直不成功，ip地址也对，可以ping的通，煎熬了我一晚上，第二天发现自己第一次使用CentOS不知道这个防火墙是自带开启的，郁闷。</p>
+        
+          
+            <h1 id="python-tips"><a href="#python-tips" class="headerlink" title="python tips"></a>python tips</h1><h2 id="basic-grammer"><a href="#basic-grammer" class="headerlink" title="basic grammer"></a>basic grammer</h2><ul>
+<li>print(‘Hello,world’)</li>
+<li>input()</li>
+<li>\  r’’ <em>no transfer</em></li>
+<li>True False and or not None </li>
+<li>/ // %</li>
+<li>list[‘one’,..] tuple(‘one’)</li>
+<li><code>if aaa: elif bbb :  else :</code>  <code>while s &gt; 0:   print(&#39;there is no money&#39;)</code></li>
+<li>range()  pass</li>
+<li>dict = {‘name’:’kinleon’,’age’:25}  s = set{[1,2,3,3]} s = {1,2,3}</li>
+<li>abs(-20) max(1,2,3) int() hex()</li>
+<li><code>def function():     return</code> from fileName import functionName<h2 id="higher-property"><a href="#higher-property" class="headerlink" title="higher property"></a>higher property</h2></li>
+</ul>
+<ol>
+<li>切片<br> list[0:5:2] ‘abcdef’[:2]</li>
+<li>迭代<br> for xx in …<br> from collections import Iterable<br> isinstance([1,2,3],Iterable) True<br> for i, value in enumerate([‘a’, ‘b’, ‘c’]):<br> for x,y in dict:</li>
+<li>列表生成式 (PS:看到这我又一次感叹Python的变态)<br> list[1,2,3,4,5] = list(range(1,6))<br> [x * x for x in range(1, 11) if x % 2 == 0]<br> [m + n for m in ‘ABC’ for n in ‘XYZ’]<br> [k + ‘=’ + v for k, v in d.items()]<br> [s.lower() for s in L]</li>
+<li>生成器<br> l = ()<br> 斐波那契数列原理 通过算法推算后面的内容<br> <code>def fib(max):  n, a, b = 0, 0, 1   while n &lt; max:  print(b)    a, b = b, a + b   n = n + 1     return &#39;done&#39;</code><br> 函数内部有yield  这个函数就是generator  生成器主要指的是一种机制  一边循环一边计算</li>
+<li></li>
+</ol>
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
@@ -325,36 +361,23 @@
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/09/05/我自己的优化总结/" rel="next" title="我自己的优化总结">
-                <i class="fa fa-chevron-left"></i> 我自己的优化总结
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/19/瀑布流/" rel="prev" title="瀑布流">
-                瀑布流 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
 
       
+      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -362,10 +385,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -385,17 +404,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -472,17 +482,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mosquitto框架"><span class="nav-number">1.</span> <span class="nav-text">Mosquitto框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境介绍"><span class="nav-number">2.</span> <span class="nav-text">环境介绍</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -579,10 +578,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
