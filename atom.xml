@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gmcoder.github.io/"/>
-  <updated>2016-09-19T14:49:16.000Z</updated>
+  <updated>2016-09-19T14:50:22.000Z</updated>
   <id>https://gmcoder.github.io/</id>
   
   <author>
@@ -16,13 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文字比划动画实现</title>
+    <link href="https://gmcoder.github.io/2016/09/19/%E6%96%87%E5%AD%97%E6%AF%94%E5%88%92%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://gmcoder.github.io/2016/09/19/文字比划动画实现/</id>
+    <published>2016-09-19T14:50:22.000Z</published>
+    <updated>2016-09-19T14:50:22.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>关于核心动画的基本讲解</title>
     <link href="https://gmcoder.github.io/2016/09/19/%E5%85%B3%E4%BA%8E%E6%A0%B8%E5%BF%83%E5%8A%A8%E7%94%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%B2%E8%A7%A3/"/>
     <id>https://gmcoder.github.io/2016/09/19/关于核心动画的基本讲解/</id>
     <published>2016-09-19T14:49:16.000Z</published>
-    <updated>2016-09-19T14:49:16.000Z</updated>
+    <updated>2016-09-19T14:51:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。"><a href="#本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。" class="headerlink" title="本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。"></a>本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。</h1>]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。&quot;&gt;&lt;a href=&quot;#本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画。&quot; class=&quot;headerlink&quot; title=&quot;本文主要是简单介绍一下核心动画的概念，以及几个常用的核心动画
     
     </summary>
     
