@@ -178,10 +178,10 @@
   
   <entry>
     <title>pythonTips</title>
-    <link href="https://gmcoder.github.io/2016/09/04/pythonTips/"/>
-    <id>https://gmcoder.github.io/2016/09/04/pythonTips/</id>
-    <published>2016-09-04T15:57:57.000Z</published>
-    <updated>2016-09-06T15:45:03.000Z</updated>
+    <link href="https://gmcoder.github.io/2016/08/04/pythonTips/"/>
+    <id>https://gmcoder.github.io/2016/08/04/pythonTips/</id>
+    <published>2016-08-04T15:57:57.000Z</published>
+    <updated>2016-09-21T15:31:33.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="python-tips"><a href="#python-tips" class="headerlink" title="python tips"></a>python tips</h1><h2 id="basic-grammer"><a href="#basic-grammer" class="headerlink" title="basic grammer"></a>basic grammer</h2><ul>
 <li>print(‘Hello,world’)</li>
