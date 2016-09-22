@@ -94,10 +94,10 @@
     <link href="https://gmcoder.github.io/2016/09/11/Mosquitto%E6%A1%86%E6%9E%B6%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BA%E6%8E%A2%E8%B7%AF/"/>
     <id>https://gmcoder.github.io/2016/09/11/Mosquitto框架服务端搭建探路/</id>
     <published>2016-09-11T12:15:46.000Z</published>
-    <updated>2016-09-17T14:36:35.000Z</updated>
+    <updated>2016-09-22T15:10:23.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Mosquitto框架"><a href="#Mosquitto框架" class="headerlink" title="Mosquitto框架"></a>Mosquitto框架</h1><p> mosquitto是一个基于MQTT协议的框架，最近正好在做这个的iOS端，顺便就把服务端搞了一下，之后会写一篇关于iOS端的博客介绍一下我踩得坑。</p>
-<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p> 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。<br> 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大家踩坑，我还是把我踩得坑分享出来。我安装的是CentOS7系统，是Linux的发行版之一。<br> Mosquitto的安装有两种方法，一种是源码安装，一种是yum安装。对于我这种懒惰的人来说，果断选择了三行命令的yum安装方法。<br> 安装之后我开始调试，在CentOS上开启三个终端，一个开启服务，一个订阅，一个发布，测试通过，可以使用。但是问题来了，我自己写的客户端却一直不成功，ip地址也对，可以ping的通，煎熬了我一晚上，第二天发现自己第一次使用CentOS不知道这个防火墙是自带开启的，郁闷。</p>
+<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p> 我为了演示，装了一个虚拟机，然后安装了CentOS系统，在这上面安装并调试Mosquitto框架，下面是我的具体过程和相关资源。<br> 我在我的mac上装了一个虚拟机，虚拟机大家应该都会装，网上也有很多教程，但是为了避免大家踩坑，我还是把我踩得坑分享出来。我安装的是CentOS7系统，是Linux的发行版之一。<br> 我安装虚拟机的软件是VMWare,下面是我的配置过程以及资源地址。<br> Mosquitto的安装有两种方法，一种是源码安装，一种是yum安装。对于我这种懒惰的人来说，果断选择了三行命令的yum安装方法。<br> 安装之后我开始调试，在CentOS上开启三个终端，一个开启服务，一个订阅，一个发布，测试通过，可以使用。但是问题来了，我自己写的客户端却一直不成功，ip地址也对，可以ping的通，煎熬了我一晚上，第二天发现自己第一次使用CentOS不知道这个防火墙是自带开启的，郁闷。</p>
 ]]></content>
     
     <summary type="html">
